@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "1faef0f7-482c-44d0-9401-f2cc05c16650",
+		"name": "small-api-bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST wallet create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QiIsImV4cCI6MTY0MjQ1MjYyOCwiaWF0IjoxNjQyNDM0NjI4fQ.veXNBVUeoKF-s4YUjXJd4o3FfCFF60SgAYEMFE-bBbWWwmO4_TtbqMirUvn8__G4F7D98GItSU6qemiF3VJVAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"testB\",\n    \"password\": \"1234\",\n    \"name\": \"Test B\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"testB\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST deposit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QSIsImV4cCI6MTY0MjQ1MjQxNiwiaWF0IjoxNjQyNDM0NDE2fQ.yd_MyvZdpUoLI3jJx91jAJd2XpscblRu1GGSXEQgCYgelD5idLgrENiEM_j_mexRxrg4Vo20jU6F8EOs5cLkQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":\"45.6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET wallet by address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QiIsImV4cCI6MTY0MjQ1MjYyOCwiaWF0IjoxNjQyNDM0NjI4fQ.veXNBVUeoKF-s4YUjXJd4o3FfCFF60SgAYEMFE-bBbWWwmO4_TtbqMirUvn8__G4F7D98GItSU6qemiF3VJVAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/5dfa3df4-ab8f-4bc9-ab6e-3419c84bc888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"5dfa3df4-ab8f-4bc9-ab6e-3419c84bc888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QiIsImV4cCI6MTY0MjQ1MjYyOCwiaWF0IjoxNjQyNDM0NjI4fQ.veXNBVUeoKF-s4YUjXJd4o3FfCFF60SgAYEMFE-bBbWWwmO4_TtbqMirUvn8__G4F7D98GItSU6qemiF3VJVAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":\"10\",\n    \"from\":\"ebfbceb0-45af-4849-b2fe-5592b35aab3f\",\n    \"to\":\"5dfa3df4-ab8f-4bc9-ab6e-3419c84bc888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
